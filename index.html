@@ -33,6 +33,31 @@
 <link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 <body>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDZueWxL8CIeUjlF-X-OJjcjYzPPxBJkwI",
+      authDomain: "wechat-8994b.firebaseapp.com",
+      databaseURL: "https://wechat-8994b.firebaseio.com",
+      projectId: "wechat-8994b",
+      storageBucket: "wechat-8994b.appspot.com",
+      messagingSenderId: "951825014260",
+      appId: "1:951825014260:web:64133333ab1204370bada1",
+      measurementId: "G-P7YQ2YRCRT"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 <div class="animsition">
 <div class="loader"><div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div></div>
 
@@ -648,6 +673,7 @@ function showPopupOnce() {
     }
 
     setInterval(loadNextPost, 3000); // Change slide every 5 seconds (adjust as needed)
+    
   </script>
 <script src="js/scripts.js"></script>
 </body>
